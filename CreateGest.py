@@ -5,13 +5,13 @@ import os
 image_x, image_y = 50, 50
 
 cap = cv2.VideoCapture(0)
-fbag = cv2.createBackgroundSubtractorMOG2()
+
 
 def create_folder(folder_name):
     if not os.path.exists(folder_name):
         os.mkdir(folder_name)
 
-def main(g_id):
+def creating_gesture(g_id):
     total_pics = 1200
     cap = cv2.VideoCapture(0)
     x, y, w, h = 300, 50, 350, 350
@@ -73,4 +73,4 @@ def main(g_id):
 
 
 g_id = input("Enter gesture number: ")
-main(g_id)
+creating_gesture(g_id)
