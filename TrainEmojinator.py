@@ -29,7 +29,7 @@ def keras_model(image_x, image_y):
 
     return model, callbacks_list
 
-def main():
+def keras_image():
     data = pd.read_csv("train_foo.csv")
     dataset = np.array(data)
     np.random.shuffle(dataset)
@@ -77,4 +77,4 @@ def main():
     model.save('emojinator.h5')
 
 
-main()
+keras_image()
